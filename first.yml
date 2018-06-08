@@ -1,0 +1,15 @@
+--- # First YAML playbook
+- hosts: 10.10.11.43
+  user: devops_admin
+  sudo: yes
+  connection: local
+  gather_facts: yes
+
+  tasks:
+  - name: get the hostname of the server
+    shell: "hostname"
+    register: hostname
+    
+  - debug:
+      msg: "{{hostname.stdout}}"
+
