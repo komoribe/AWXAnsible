@@ -1,4 +1,4 @@
-- hosts: "eximr-vs-033"
+- hosts: demo
   user: devops_admin
   sudo: no
   gather_facts: yes
