@@ -1,0 +1,19 @@
+- hosts: "eximr-vs-033"
+  user: devops_admin
+  sudo: no
+  gather_facts: yes
+
+  tasks:
+  - name: get the hostname of the server
+    shell: "hostname"
+    register: hostname
+    
+  - debug:
+      msg: "{{hostname.stdout}}"
+      
+  - name: get the uname of the server
+    shell: "uname -a"
+    register: uname
+    
+  - debug:
+      msg: "{{uname.stdout}}"    
