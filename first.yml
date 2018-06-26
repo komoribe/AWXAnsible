@@ -12,4 +12,11 @@
     
   - debug:
       msg: "{{hostname.stdout}}"
+      
+  - name: get the hostname of the server
+    shell: "uname -a"
+    register: uname
+    
+  - debug:
+      msg: "{{uname.stdout}}"
 
