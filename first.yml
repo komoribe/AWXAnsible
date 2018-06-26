@@ -1,5 +1,5 @@
 --- # First YAML playbook
-- hosts: 10.10.11.43
+- hosts: eximr-vs-033
   user: devops_admin
   sudo: yes
   connection: local
